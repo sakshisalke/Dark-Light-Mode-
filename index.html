@@ -2,9 +2,74 @@
 <html>
 <head>
     <title>Dark-light theme</title>
+    <style>
+        .theme-img{
+            height: 80px;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .heading{
+            text-align: center;
+        }
+        .fort-img{
+            height: 500px;
+            display: block;
+            margin: 40px auto;
+            border-radius: 10px;
+            border: 1px solid rgb(119, 116, 116);
+        }
+        .info{
+            font-size: 20px;
+        }
+
+        .active{
+            border: 2px solid black;
+        }
+        .body{
+         background-color: black;
+         color: #fff;   
+        }
+    </style>
 </head>
 <body>
-    <h1>Dark-Light Theme Changer</h1>
+    <img src="./img/dark.png" alt="dark-mode" class="theme-img" id="dark-mode" onclick="darkMode()"/>
+    <img src="./img/light.png" alt="dark-mode" class="theme-img" id="light-mode" onclick="lightMode()"/>
     
+    <div>
+        <h1 class="heading">Raigad</h1>
+        <img src="./img/raygad.jpg" alt="Raygad-fort" class="fort-img"/>
+        <p class="info">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Raigad is one of the districts in Konkan Division of Maharashtra and Arabian Sea coast forms western boundary of the district. Most hilly places of the District are in the Sahyadri mountain range. Previously known as Kolaba, it was rechristened as Raigad District.
+        </br> </br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Raigad is known for its scintillating historical places, pristine beaches, picturesque landscapes and diverse flora and fauna of Western Ghats. Religious places in the district like Ashtavinayak Temples, Elephanta caves etc. are sole testimonies to its rich cultural past. Culturally, Raigad has been the ever vibrant community with population of different religions, dialects, ethnicity etc. Few places in the Raigad district are historic hinterland of the Bene-Israeli Jews.
+        </br> </br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Raigad has been bestowed with surreal & magnificent forts viz. Raigad Fort, Kolaba Fort, Murud-Janjira Fort, Sudhagad Fort etc. Dr. Babasaheb Ambedkar Technological University in Raigad, is the only Technological University in the State of Maharashtra. From Industrial Complexes of national importance to the internationally renowned scientific institutions, Raigad is constantly taking strides to the forefronts of 21st century.
+    
+        </p>
+    </div>
+
+
+    <script>
+        function darkMode(){
+            const darkMode= document.getElementById("dark-mode");
+            darkMode.classList.add('active');
+
+            const lightMode= document.getElementById("light-mode");
+            lightMode.classList.remove('active');
+        }
+
+        function lightMode(){
+            const darkMode= document.getElementById("dark-mode");
+            darkMode.classList.remove('active');
+
+            const lightMode= document.getElementById("light-mode");
+            lightMode.classList.add('active');
+        }
+
+    </script>
+   
+
 </body>
 </html>
