@@ -27,13 +27,17 @@
         .active{
             border: 2px solid black;
         }
-        .body{
+        .dark-theme{
          background-color: black;
          color: #fff;   
         }
+        .light-theme{
+         background-color: #ffff80;
+         color: #000;   
+        }
     </style>
 </head>
-<body>
+<body id="body">
     <img src="./img/dark.png" alt="dark-mode" class="theme-img" id="dark-mode" onclick="darkMode()"/>
     <img src="./img/light.png" alt="dark-mode" class="theme-img" id="light-mode" onclick="lightMode()"/>
     
@@ -58,6 +62,9 @@
 
             const lightMode= document.getElementById("light-mode");
             lightMode.classList.remove('active');
+
+            const bodyElement= document.getElementById("body");
+            bodyElement.className = "dark-theme";
         }
 
         function lightMode(){
@@ -66,6 +73,9 @@
 
             const lightMode= document.getElementById("light-mode");
             lightMode.classList.add('active');
+
+            const bodyElement= document.getElementById("body");
+            bodyElement.className = "light-theme";
         }
 
     </script>
